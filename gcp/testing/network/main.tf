@@ -2,11 +2,6 @@ resource "google_compute_network" "agentra_api_vpc" {
   name                    = "agentra-api-vpc"
   auto_create_subnetworks = false
   routing_mode            = "REGIONAL"
-
-  labels = {
-    stack = "network"
-    managed-by = "opentofu"
-  }
 }
 
 resource "google_compute_subnetwork" "agentra_api_subnet" {
